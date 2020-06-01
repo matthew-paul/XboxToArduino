@@ -3,7 +3,7 @@ import time
 import serial
 from serial.tools import list_ports
 
-from util import eprint
+from PythonCode.util import eprint
 
 
 def arduino_port():
@@ -25,7 +25,6 @@ def arduino_port():
         print('Arduino Found')
 
     return arduinoPort
-
 
 def send_message(ser, message):
     if not ser.is_open:

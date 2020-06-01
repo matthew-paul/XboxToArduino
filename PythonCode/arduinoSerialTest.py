@@ -1,8 +1,8 @@
 import serial
 
-import arduinoUtil
+from PythonCode.arduinoUtil import arduino_port
 
-arduinoPort = arduinoUtil.arduino_port()
+arduinoPort = arduino_port()
 print(f'Name: {arduinoPort.name}')
 
 ser = serial.Serial()

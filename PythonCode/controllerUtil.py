@@ -30,7 +30,6 @@ JOYSTICK_MAX = 32768.0
 TRIGGER_MAX = 256.0
 DEADZONE = 0.15  # percent of total joystick motion
 
-
 class ControllerStatus:
     def __init__(self, other_obj=None):
         self.joysticks = {'LJX': 0,
@@ -89,7 +88,6 @@ class ControllerStatus:
 
         return self.joysticks == other.joysticks and self.buttons == other.buttons and self.hats == other.hats
 
-
 class Event:
     def __init__(self, event):
         self.type = None
@@ -119,7 +117,6 @@ class Event:
 
     def __str__(self):
         return f'{self.type} {self.code} {self.state}'
-
 
 class ControllerThread(threading.Thread):
     def __init__(self, thread_id, name, status):
@@ -175,3 +172,4 @@ class ControllerThread(threading.Thread):
                         print('Exiting controller loop')
 
             time.sleep(0.002)
+

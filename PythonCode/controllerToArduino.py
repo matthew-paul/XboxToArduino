@@ -3,10 +3,10 @@ import time
 
 import serial
 
-import arduinoUtil
-import controllerUtil
-from arduinoUtil import send_message as send
-from util import eprint
+import PythonCode.arduinoUtil as arduinoUtil
+import PythonCode.controllerUtil as controllerUtil
+from PythonCode.arduinoUtil import send_message as send
+from PythonCode.util import eprint
 
 PRESS_THRESHOLD = 0.1
 
